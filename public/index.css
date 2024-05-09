@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+select:required:invalid {
+    color: gray;
+  }
+  option[value=""][disabled] {
+    display: none;
+  }
+  option {
+    color: black;
+  }
+
+body{
+    background-color: whitesmoke;
+    margin: auto;
+    width: 1240px;
+}
+.card_row, .buttons{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    box-shadow: 10px 10px 5px -10px black;
+    background-color: white;
+    width: 40%;
+    height: 270px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 40px;
+    padding: 10px 15px;
+    position: relative;
+}
+
+input, select, textarea{
+    border: 2px solid rgb(221, 221, 221);
+    border-radius: 5px;
+    padding: 10px 10px;
+    width: 95%;
+    background-color: white;
+    margin-top: 10px;
+}
+
+input:focus, select:focus, textarea:focus{
+    border: 1px solid black;
+} 
+
+.row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+textarea{
+    resize: vertical;
+    min-height: 75px;
+    max-height: 100px;
+}
+
+.row input{
+    width: 310px;
+}
+#job_type, #job_source, #technician{
+    width: 100%;
+}
+#zipcode{
+    width: 100px;
+}
+
+button{
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    padding: 20px 35px;
+    margin-top: 20px;
+}
+
+.create{
+    background-color: rgb(255, 208, 0);
+}
+
+.save{
+    background-color: rgb(181, 181, 181);
+}
+
+.message{
+    padding: 10px 5px;
+    border: 1px solid rgb(194, 194, 194);
+    width: fit-content;
+    background-color: white;
+    box-shadow: 10px 10px 5px -10px black;
+    position: relative;
+}
+
+.message span{
+    color: white;
+    padding: 5px 10px;
+    background-color: orange;
+    font-size: large;
+    position: relative;
+}
+
+.arrow{
+    width: 0;
+    height: 0;
+    border-radius: 20px;
+    display: inline-block;
+    position: relative;
+    bottom: -6.5px;
+    left: 2px;
+    z-index: 10;
+}
+
+    .arrow:after{
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+    }
+
+
+.arrow-up{
+     border-left: 20px solid transparent;
+     border-right: 20px solid transparent;
+     border-bottom: 20px solid rgb(194, 194, 194);
+}
+    .arrow-up:after{
+         top: 1px;
+         border-left: 20px solid transparent;
+         border-right: 20px solid transparent;
+         border-bottom: 20px solid #fff;
+         right: -20px;
+    }
+
+.message_box{
+    position: absolute;
+    left: 20px;
+    margin-top: -10px;
+    display: none;
+}
+
+.row .message_box{
+    margin-top: 40px;
+}
+.row #last_name+.message_box{
+    margin-left: 250px;
+}
+.row #area+.message_box{
+    margin-left: 150px;
+}
